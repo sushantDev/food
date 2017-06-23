@@ -18,7 +18,7 @@ class UsersTableSeeder extends Seeder
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
 
         // create user
-        $user = App\User::create([
+        App\User::create([
             'name'     => 'Food Admin',
             'email'    => 'admin@food.com',
             'password' => bcrypt('admin@food')

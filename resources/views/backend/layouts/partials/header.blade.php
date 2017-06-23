@@ -115,7 +115,7 @@
                             <ul class="uk-nav js-uk-prevent">
                                 <li><a href="page_user_profile.html">My profile</a></li>
                                 <li><a href="page_settings.html">Settings</a></li>
-                                <li><a href="login.html">Logout</a></li>
+                                <li><a href="{{url('/logout')}}">Logout</a></li>
                             </ul>
                         </div>
                     </li>

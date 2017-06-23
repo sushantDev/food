@@ -2,7 +2,7 @@
 <aside id="sidebar_main">
     <a href="#" class="uk-close sidebar_main_close_button"></a>
     <div class="sidebar_main_header">
-        <div class="sidebar_logo"><a href="index.html"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a></div>
+        <div class="sidebar_logo"><a href="{{ url('/') }}"><img src="assets/img/logo_main.png" alt="" height="15" width="71"/></a></div>
         <div class="sidebar_actions">
             <select id="lang_switcher" name="lang_switcher">
                 <option value="gb" selected>English</option>
@@ -145,5 +145,52 @@
                 </ul>
             </li>
         </ul>
+
+        {{--<ul>--}}
+        {{--@foreach($allMenu as $menu)--}}
+        {{--<li class="menu {{ $menu['class'] ?: '' }}">--}}
+        {{--<a href="{{ $menu['route'] }}">--}}
+        {{--@if(isset($menu['icon']))--}}
+        {{--<div class="gui-icon">--}}
+        {{--<i class="{{ $menu['icon'] }}"></i>--}}
+        {{--</div>--}}
+        {{--@else--}}
+        {{--<div class="gui-icon gui-text">--}}
+        {{--{{ $menu['text'] }}--}}
+        {{--</div>--}}
+        {{--@endif--}}
+        {{--<span class="title">{{ $menu['title'] }}</span>--}}
+        {{--</a>--}}
+        {{--@if(isset($menu['items']))--}}
+        {{--<ul>--}}
+        {{--@foreach($menu['items'] as $item)--}}
+        {{--@if(isset($item['items']))--}}
+        {{--<li class="gui-folder">--}}
+        {{--<a href="javascript:void(0);">--}}
+        {{--<span class="title sub">{{ $item['title'] }}</span>--}}
+        {{--</a>--}}
+        {{--<ul>--}}
+        {{--@foreach($item['items'] as $subItem)--}}
+        {{--<li>--}}
+        {{--<a href="{{ $subItem['route'] }}">--}}
+        {{--<span class="title">{{ $subItem['title'] }}</span>--}}
+        {{--</a>--}}
+        {{--</li>--}}
+        {{--@endforeach--}}
+        {{--</ul>--}}
+        {{--</li>--}}
+        {{--@else--}}
+        {{--<li class="sub-menu">--}}
+        {{--<a href="{{ $item['route'] }}">--}}
+        {{--<span class="title sub">{{ $item['title'] }}</span>--}}
+        {{--</a>--}}
+        {{--</li>--}}
+        {{--@endif--}}
+        {{--@endforeach--}}
+        {{--</ul>--}}
+        {{--@endif--}}
+        {{--</li>--}}
+        {{--@endforeach--}}
+        {{--</ul>--}}
     </div>
 </aside><!-- main sidebar end -->

@@ -11,15 +11,16 @@
                 <div class="login_heading">
                     <div class="user_avatar"></div>
                 </div>
-                <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}">
+                @include('partials.errors')
+                <form class="form-horizontal" role="form" method="POST" action="{{ route('login') }}" autocomplete="off" novalidate>
                     {{ csrf_field() }}
-                    <div class="uk-form-row{{ $errors->has('email') ? ' has-error' : '' }}">
+                    <div class="uk-form-row">
                         <label for="login_username">E-Mail Address</label>
-                        <input id="email" type="email" class="md-input" name="login_username" id="login_username" value="{{ old('email') }}" required autofocus>
+                        <input type="text" class="md-input" id="email" name="email" value="{{ old('email') }}" required>
                     </div>
-                    <div class="uk-form-row{{ $errors->has('password') ? ' has-error' : '' }}">
+                    <div class="uk-form-row">
                         <label for="login_username">Password</label>
-                        <input id="password" type="password" class="md-input" name="login_username" required>
+                        <input type="password" class="md-input" id="password" name="password" required>
                     </div>
                     <div class="uk-margin-medium-top">
                         <button type="submit" class="md-btn md-btn-primary md-btn-block md-btn-large">Sign In</button>
